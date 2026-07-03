@@ -6,6 +6,8 @@ import {
   TableRow,
   Paper,
 } from "@mui/material";
+import GridCell from "../GridCell/GridCell";
+
 
 const GRID_SIZE = 5;
 
@@ -20,18 +22,11 @@ function GridBoard() {
           {rows.map((row) => (
             <TableRow key={row}>
               {columns.map((column) => (
-                <TableCell
+               <GridCell
                   key={`${column}-${row}`}
-                  sx={{
-                    width: 70,
-                    height: 70,
-                    border: "1px solid #ccc",
-                    textAlign: "center",
-                    padding: 0,
-                  }}
-                >
-                  {/* Marker will go here later */}
-                </TableCell>
+                  x={column}
+                  y={row}
+                />
               ))}
             </TableRow>
           ))}
