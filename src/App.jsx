@@ -46,6 +46,26 @@ function App() {
       return;
     }
 
+    // Handle REPORT separately
+    if (input === "REPORT") {
+      executeCommand(robot, "REPORT"); // Still logs to the console
+
+      setNotification({
+        open: true,
+        message: `Robot Position: ${robot.x}, ${robot.y}, ${robot.direction}`,
+        severity: "info",
+      });
+
+      setCommand("");
+
+      requestAnimationFrame(() => {
+        inputRef.current?.focus();
+      });
+
+      return;
+    }
+
+
     if (
       input === "MOVE" ||
       input === "LEFT" ||
