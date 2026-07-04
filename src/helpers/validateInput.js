@@ -32,6 +32,18 @@ if (
 ) {
     return false;
 }
+const xCoordinate = Number(x);
+const yCoordinate = Number(y);
+
+if (
+  xCoordinate < 0 ||
+  xCoordinate > 4 ||
+  yCoordinate < 0 ||
+  yCoordinate > 4
+) {
+  return false;
+}
+
 if (!validDirections.includes(direction)) {
   return false;
 }
