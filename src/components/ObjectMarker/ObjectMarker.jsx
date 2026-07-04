@@ -12,11 +12,11 @@ const rotationMap = {
 function ObjectMarker({ direction }) {
   return (
     <NavigationIcon
-        sx={{
-          transform: `rotate(${rotationMap[direction]})`,
-          transition: "transform 0.2s ease",
-  }}
-/>
+      sx={{
+        transform: `rotate(${rotationMap[direction]})`,
+        transition: "transform 0.2s ease",
+      }}
+    />
   );
 }
 

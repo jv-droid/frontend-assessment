@@ -20,19 +20,19 @@ function GridBoard({ robot }) {
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row}>
-            {columns.map((column) => {
+              {columns.map((column) => {
                 const hasMarker = column === robot.x && row === robot.y;
                 return (
                   <GridCell
-                     key={`${column}-${row}`}
-                     x={column}
-                     y={row}
-                     hasMarker={hasMarker}
-                     direction={robot.direction}
+                    key={`${column}-${row}`}
+                    x={column}
+                    y={row}
+                    hasMarker={hasMarker}
+                    direction={robot.direction}
                   />
                 );
               })}
-              
+
             </TableRow>
           ))}
         </TableBody>
