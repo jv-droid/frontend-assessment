@@ -1,10 +1,10 @@
-# 🤖 Robot Grid Placement
+# Object Grid Placement
 
-A React application that visualizes the placement of a robot on a **5×5 grid** based on user commands. The project was developed as part of a frontend assessment using **React**, **Material UI**, and **Storybook**.
+A React application that visualizes the placement of a Object on a **5×5 grid** based on user commands. The project was developed as part of a frontend assessment using **React**, **Material UI**, and **Storybook**.
 
 ---
 
-## 📸 Application Preview
+## Application Preview
 
 ### Main Application
 
@@ -12,47 +12,47 @@ A React application that visualizes the placement of a robot on a **5×5 grid** 
 
 ---
 
-## ✨ Features
+##Features
 
-- Visualize a robot on a fixed **5×5 grid**
-- Place the robot using coordinates and direction
-- Rotate the robot to face:
+- Visualize a Object on a fixed **5×5 grid**
+- Place the Object using coordinates and direction
+- Rotate the Object to face:
   - NORTH
   - EAST
   - SOUTH
   - WEST
-- Execute robot commands:
+- Execute Object commands:
   - `MOVE`
   - `LEFT`
   - `RIGHT`
   - `REPORT`
-- Prevent the robot from moving outside the board
+- Prevent the Object from moving outside the board
 - Validate user input with friendly error messages
 - Keyboard shortcut (**Enter**) to execute commands
 - Automatic focus on the command input
-- Storybook stories demonstrating different robot positions and edge cases
+- Storybook stories demonstrating different Object positions and edge cases
 
 ---
 
-## 📸 Sample Commands
+## Sample Commands
 
-### Place the Robot
+### Place the Object
 
 ```text
 2,3 NORTH
 ```
 
-![Place Command](./screenshots/place-command-preview.png)
+![Place Command](./screenshots/direction-command-preview.png)
 
 ---
 
-### Move the Robot
+### Move the Object
 
 ```text
 MOVE
 ```
 
-![Move Command](./screenshots/move-preview.png)
+![Move Command](./screenshots/move.png)
 
 ---
 
@@ -62,9 +62,9 @@ MOVE
 REPORT
 ```
 
-Displays the robot's current position in a notification and logs the position to the browser console.
+Displays the Object's current position in a notification and logs the position to the browser console.
 
-![Report Command](./screenshots/report-preview.png)
+![Report Command](./screenshots/report.png)
 
 ---
 
@@ -80,7 +80,7 @@ The application validates user input and displays an error notification.
 
 ---
 
-## 📚 Storybook
+## Storybook
 
 The project includes Storybook to document and demonstrate the `GridBoard` component under different scenarios.
 
@@ -100,7 +100,7 @@ Stories include:
 
 ---
 
-## 🛠️ Technologies
+## Technologies
 
 - React
 - Vite
@@ -109,7 +109,7 @@ Stories include:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Install dependencies
 
@@ -131,7 +131,7 @@ http://localhost:5173
 
 ---
 
-## 📖 Storybook
+## Storybook
 
 Run Storybook locally:
 
@@ -147,7 +147,7 @@ http://localhost:6006
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 src/
@@ -168,7 +168,7 @@ src/
 
 ---
 
-## 🧪 Supported Commands
+## Supported Commands
 
 ### Placement
 
@@ -178,7 +178,7 @@ src/
 4,4 SOUTH
 ```
 
-### Robot Commands
+### Object Commands
 
 ```text
 MOVE
@@ -189,16 +189,16 @@ REPORT
 
 ---
 
-## 📌 Notes
+## Notes
 
 - Coordinates range from **0** to **4**.
 - The bottom-left corner of the board represents **(0,0)**.
-- Robot movement outside the board is ignored.
+- Object movement outside the board is ignored.
 - Commands are **case-insensitive**.
 - Invalid commands display a user-friendly notification.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Developed by **Jayvee Molino** as part of a frontend assessment.
