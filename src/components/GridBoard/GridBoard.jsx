@@ -10,7 +10,7 @@ import GridCell from "../GridCell";
 
 const GRID_SIZE = 5;
 
-function GridBoard() {
+function GridBoard({ robot }) {
   const rows = Array.from({ length: GRID_SIZE }, (_, index) => GRID_SIZE - 1 - index);
   const columns = Array.from({ length: GRID_SIZE }, (_, index) => index);
 
@@ -21,14 +21,14 @@ function GridBoard() {
           {rows.map((row) => (
             <TableRow key={row}>
             {columns.map((column) => {
-                const hasMarker = column === 2 && row === 2;
-
+                const hasMarker = column === robot.x && row === robot.y;
                 return (
                   <GridCell
-                    key={`${column}-${row}`}
-                    x={column}
-                    y={row}
-                    hasMarker={hasMarker}
+                     key={`${column}-${row}`}
+                     x={column}
+                     y={row}
+                     hasMarker={hasMarker}
+                     direction={robot.direction}
                   />
                 );
               })}

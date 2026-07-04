@@ -2,7 +2,7 @@ import { TableCell } from "@mui/material";
 import "./GridCell.css";
 import ObjectMarker from "../ObjectMarker";
 
-function GridCell({ x, y, hasMarker }) {
+function GridCell({ x, y, hasMarker, direction }) {
   return (
     <TableCell
       sx={{
@@ -15,7 +15,7 @@ function GridCell({ x, y, hasMarker }) {
       data-x={x}
       data-y={y}
     >
-      {hasMarker && <ObjectMarker />}
+      {hasMarker && <ObjectMarker direction={direction} />}
     </TableCell>
   );
 }
