@@ -1,12 +1,11 @@
 import {
   Table,
   TableBody,
-  TableCell,
   TableContainer,
   TableRow,
   Paper,
 } from "@mui/material";
-import GridCell from "../GridCell/GridCell";
+import GridCell from "../GridCell";
 
 
 const GRID_SIZE = 5;

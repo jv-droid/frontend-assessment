@@ -1,6 +1,5 @@
 import './App.css'
-import GridBoard from "./components/GridBoard/GridBoard";
-
+import GridBoard from "./components/GridBoard";
 
 function App() {
   return (
