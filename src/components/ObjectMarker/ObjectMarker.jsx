@@ -13,7 +13,10 @@ function ObjectMarker({ direction }) {
     <NavigationIcon
       className="object-marker"
       sx={{
+        fontSize: 55,
+        color: "#222",
         transform: `rotate(${rotationMap[direction]})`,
+        transition: "transform .2s ease",
       }}
     />
   );
