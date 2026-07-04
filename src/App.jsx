@@ -38,6 +38,7 @@ function App() {
     inputRef.current?.focus();
   }, []);
 
+  // Handle both PLACE and robot commands from the input
   const handlePlace = () => {
     const input = command.trim().toUpperCase();
 
@@ -74,14 +75,14 @@ function App() {
       return;
     }
 
-
+    // Ignore invalid placement commands
     if (!validateInput(input)) {
       setNotification({
         open: true,
         message: "Invalid command. Example: 2,3 NORTH or MOVE.",
         severity: "error",
       });
-
+      // Keep the input ready for the next command
       requestAnimationFrame(() => {
         inputRef.current?.focus();
       });
@@ -97,33 +98,26 @@ function App() {
       inputRef.current?.focus();
     });
   };
-
+  // Close the notification and return focus to the input
   const handleCloseNotification = () => {
     setNotification((prev) => ({
       ...prev,
       open: false,
     }));
-
+    // Keep the input ready for the next command
     requestAnimationFrame(() => {
       inputRef.current?.focus();
     });
   };
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#1d1d26",
-      }}
-    >
+    <div className="app">
       <Stack spacing={3} alignItems="center">
         <GridBoard robot={robot} />
 
-        <Stack direction="row" spacing={2}>
+        <Stack className="controls" direction="row">
           <TextField inputRef={inputRef}
+            // Allow Enter to execute the current command
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 handlePlace();
