@@ -1,0 +1,9 @@
+.grid-cell {
+    width: 90px;
+    height: 90px;
+    padding: 0 !important;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}

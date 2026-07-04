@@ -5,13 +5,7 @@ import ObjectMarker from "../ObjectMarker";
 function GridCell({ x, y, hasMarker, direction }) {
   return (
     <TableCell
-      sx={{
-        width: 70,
-        height: 70,
-        border: "1px solid #ccc",
-        textAlign: "center",
-        padding: 0,
-      }}
+      className="grid-cell"
       data-x={x}
       data-y={y}
     >
